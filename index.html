@@ -1,11 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title> Diamond Cinema</title>
+  <!-- STYLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+  <style>
+    body {
+      /* margin is the outside area of the div )(الهامش)*/
+      margin: 0;
+      font-family : 'roboto',sans-serif;   
+    }
+    .header {
+      background-color: #0171f9;
+      display: flex;
+      /* flex make the elemnts of div next each other(ROW) */
+        justify-content:space-between;
+      /* justify-content يقسم العناصر بتاعت الدف بلعدل علي نفس الخط ; */
+      align-items:flex-end;
+      /* cinter the elemnet in the midle */
+      padding: 10px 50px;
+      /* padding(الحشو)+(الاطار الداخلي) */
+      /*     10high 50weidth */
+    }
+    .header2{
+        background-color: #0171f9;
+        padding: 10px 20px;
+        font-size:x-large;
+        padding-right: 30 px;
+    }
+    .header-links a{
+        color:white;
+        padding: 0 60px ;
+        text-decoration: none;
+        border-radius: 15px;
+        font-size: 80px;
+    }
+    .header-links a:hover {
+        background-color: #2386fe;
+    }
+    .header-links button {
+       background-color:crimson;
+       font-size: 80px;
+       color: white;
+       border-radius: 120px;
+     }
+     .header-links button :hover {
+        background-color:black;
+   }
+   .landing{
+    background-color:#130a3d;
+      display: flex;
+      /* flex make the elemnts of div next each other(ROW) */
+      justify-content: space-between;
+      /* justify-content يقسم العناصر بتاعت الدف بلعدل علي نفس الخط ; */
+      align-items: center;
+      /* cinter the elemnet in the midle */
+      padding: 10px 50px;
+      /* padding(الحشو)+(الاطار الداخلي) */
+      /*     10high 50weidth */
+      color:aliceblue;
+      font-size: 55px;
+      border-radius: 0 0 100px 100px;
+   }
+   .landing-search{
+    border-radius: 200px;
+    border: none;
+    outline: none;
+    height: 30px;
+    padding-left: 25px;
+    padding-right: 10px;
+    font-size: 21px;
+
+   }
+   .landing-search button{
+ position:absolute; 
+ left: 200px;
+ background-color: darkgoldenrod;
+ height: 30px;
+}
+.image{
+ border-radius:100px;
+}
+.left-cont{
+width: 2500px;
+}
+.movie{
+  background-color:ffffff;
+      display: flex;
+      /* flex make the elemnts of div next each other(ROW) */
+      justify-content: space-between;
+      /* justify-content يقسم العناصر بتاعت الدف بلعدل علي نفس الخط ; */
+      align-items: center;
+      /* cinter the elemnet in the midle */
+      padding: 10px 50px;
+      /* padding(الحشو)+(الاطار الداخلي) */
+      /*     10high 50weidth */ 
+      margin: 200px;
+}
+/* .card{
+  width: 1000px;
+  height:1250px ;
+  background-color:#002e63;
+  border-radius: 50px;
+}
+.card-info{
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50px;
+}
+.card-name{
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 10px;
+} */
+.container{
+  margin: 20px 0 0 30px;
+  width: 100%;
+  height: 850px;
+  display: flex;
+  justify-content:  center;
+  gap:10px;
+}
+.container img{
+  width: 10%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 80px;
+  border:5px solid rgba(255,255, 255, 0.6); 
+transition : all ease-in-out 0.5s;
+}
+.container img:hover{
+  width: 20%;
+}
+.end{
+  /* background-color:#130a3d; */
+  background-image:linear-gradient(to right,#13064e,#0171f9);
+  /* background-image:linear-gradient(blue,black); */
+  height: 500px;
+  border-radius: 100px;
+  font-size: xx-large;
+  font-style:initial;
+  color:aliceblue;
+  display: flex;
+      /* flex make the elemnts of div next each other(ROW) */
+      justify-content: space-between;
+      /* justify-content يقسم العناصر بتاعت الدف بلعدل علي نفس الخط ; */
+      align-items: center;
+}
+/* dark moode */
+body.dark-mode {
+      background-color: #191925;
+      color: #ffffff;
+    }
+    .dark-mode .header {
+      background-color: #1f243d;
+    }
+    .dark-mode .header-links a {
+      color: #f2feff;
+    }
+    .dark-mode .header-links a:hover {
+      background-color: #44475a;
+    }
+    .dark-mode .landing {
+      background-color: #1b1b30;
+    }
+    .dark-mode .end {
+      background-image: linear-gradient(to right, #282a36, #44475a);
+    }
+    .dark-mode .landing-search button {
+      background-color: #ffcc00;
+      color: #ffffff;
+    }
+    .dark-mode .container img {
+      border-color: rgba(255, 204, 0, 0.6);
+      
+    }
+    #darkModeToggle.dark-mode-button {
+      background-color: #44475a;
+      color: #fffdf6;
+      
+    }
+    @keyframes logoAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.logo {
+  animation: logoAnimation 4s ease-in-out;
+}
+/* before */
+.animate-large {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 2s ease-in-out;
+}
+
+/* after*/
+.animate-large.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+  </style>
+  <!-- سفغمثثثثثثثثثثثثثثثثثثثثث -->
 </head>
 <body>
-    hellow 
+  <div class="header">
+    <img 
+    src="Images/medical.png"
+    alt="LOGO"
+    class="logo"
+    style="width: 200px; height: 200px"
+  />
+  
+    <div class="header-links">
+        <a href="#">Home</a>
+        <a href="#">Our Cinema</a>
+        <a href="#">Contact Us</a>
+        <button>Sign in</button>
+        <a href="#" id="darkModeToggle" class="dark-mode-button">☽</a>
+      </div>
+      
+  </div>
+  <div class  = "header2"> 
+    <h1 >Diamond Cinema     
+
+    </div>
+    <!-- LANDINGgggggggggggggggggggggggg -->
+    <div class ="landing">
+        <div class="left-cont">
+            <span> Welcome To Diamond</span>
+            <h1>The Best Cinema Ever!</h1>
+            <p>
+                Diamond Cinema offers cutting-edge visuals, immersive sound, and cozy seating, turning every movie into a memorable experience.
+            </p>
+            <p>It is a premier destination for movie enthusiasts, combining state-of-the-art technology with luxurious comfort. Known for its stunning visuals, immersive sound systems, and cozy seating, it transforms every film into an unforgettable experience. Whether showcasing the latest blockbusters, timeless classics, or family-friendly hits, Diamond Cinema creates the perfect setting for entertainment. With a welcoming ambiance and top-notch amenities, it’s more than just a theater—it’s where stories come to life.</p>
+           
+            <div class="landing-search">
+                <input placeholder="Search Movie"/>
+                <button>SEARCH</button>
+              </div>
+            
+        </div>
+        
+       
+        <div class="image">
+            <img class="animate-large" src="Images/download.webp" width="3400" />
+        </div>
+        
+      
+        <br>
+        <br>
+        <br>
+        <br>
+    
+    <!-- movies -->
+  </div>
+</div>
+<div class="container">
+    <img src="Images/download (5).jpg" alt ="AVATAR"/>
+    <img src="Images/download.jpg" alt ="wolvrien"/>
+    <img src="Images/Spider Man.jpg" alt="spider-man""/>
+    <img src="Images/Venom.jpg"alt="venom"/>
+    <img src="Images/Gladiator.jpg"alt="gladiator"/>
+    <img src="Images/hawa.jpg"alt="hawa"/>
+    <img src="Images/Wild Robot.jpg"alt="wild robot"/>
+  
+</div> 
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <img src="Images/download (1).jpg"alt="mard washwashny"/>
+  <img src="Images/download (2).jpg"alt="lion king"/>
+  <img src="Images/HORROR.jpg"alt="horror"/>
+  <img src="Images/Fight Club.jpg"alt="fight club"/>
+  <img src="Images/Doctor Strange.jpg"alt ="doctor dtrange"/>
+  <img src="Images/Up.jpg"alt="up"/>
+  <img src="Images/download (4).jpg"alt="nemo"/>
+  <!-- <img src=""alt=""/> -->
+</div>
+<div class="end">
+
+    <p>
+      <h1>ALL COPYRIGHTS ARE DISCLAIMED AND EXPRESSED!</h1>
+      <img src="Images/facebook_5968764.png";
+      style="width: 200px; height: 200px"/>
+
+      <img src="Images/instagram_2111463.png"
+      style="width: 200px; height: 200px"/>
+
+      <img src="Images/twitter.png"
+      style="width: 200px; height: 200px"/>
+
+     
+    </p>
+  
+</div>
+<script>
+    const toggleButton = document.getElementById('darkModeToggle');
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleButton.classList.toggle('dark-mode-button');
+
+      if (document.body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀';
+      } else {
+        toggleButton.textContent = '☽';
+      }
+    });
+    window.addEventListener('load', () => {
+  const largeImage = document.querySelector('.animate-large');
+  if (largeImage) {
+    // active
+    setTimeout(() => {
+      largeImage.classList.add('active');
+    }, 500); //0.5 seconds
+  }
+});
+
+  </script>
+  
 </body>
-</html>
