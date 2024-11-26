@@ -1,0 +1,47 @@
+<style>
+    body {
+      /* margin is the outside area of the div )(الهامش)*/
+      margin: 0;
+      font-family : 'roboto',sans-serif;   
+    }
+    .header {
+      background-color: #0171f9;
+      display: flex;
+      /* flex make the elemnts of div next each other(ROW) */
+      justify-content: space-between;
+      /* justify-content يقسم العناصر بتاعت الدف بلعدل علي نفس الخط ; */
+      align-items: center;
+      /* cinter the elemnet in the midle */
+      padding: 10px 50px;
+      /* padding(الحشو)+(الاطار الداخلي) */
+      /*     10high 50weidth */
+    }
+    .header2{
+        background-color: #0171f9;
+        padding: 10px 20px;
+    }
+    .header-links a{
+        color:white;
+        padding: 0 60px ;
+        text-decoration: none;
+        border-radius: 15px;
+        font-size: 30px;
+    }
+    .header-links a:hover {
+        background-color: #2386fe;
+    }
+    .header-links button {
+       background-color: brown;
+       font-size: 30px;
+       color: white;
+     }
+     .header-links button :hover {
+        background-color:black;
+   }
+   .landing-page{
+    background-color:rgb(47, 107, 107);
+ 
+   }
+   
+
+  </style>
